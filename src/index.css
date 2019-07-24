@@ -22,3 +22,8 @@ body {
 .contenedor1{
    padding: 30px;
 }
+.welcome{
+	background-color: rgba(47, 226, 225, 0.4);
+	background: rgba(47, 226, 225, 0.4);
+	color: rgba(47, 226, 225, 0.4);
+}
