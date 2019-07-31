@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, withRouter} from 'react-router-dom';
+
 import {
   MDBContainer,
   MDBRow,
@@ -49,9 +49,7 @@ componentDidMount() {
       value: e.target.value})
   }
   handleClick (e){
-    
-    this.props.history.push(`/mto`);
-
+    console.log("Click... click..");
     }
 
   render (){
@@ -94,7 +92,7 @@ componentDidMount() {
                 </div>
 
               <div className="text-center mt-4">
-                
+               
                   <MDBBtn
                     onClick={this.handleClick}
                     color="light-blue"
@@ -103,7 +101,7 @@ componentDidMount() {
                   >
                     Login
                   </MDBBtn>
-                
+
               </div>
               </form>
               <MDBModalFooter>
@@ -136,7 +134,6 @@ componentDidMount() {
                 <td>{usuarios.username} </td>
                 <td>{usuarios.password}</td>
                  <td>{usuarios.fullname}</td>
-                 <td><a>Edit</a>|<a>Delete</a></td>
                   </tr>
               )}
           </tbody>

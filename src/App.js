@@ -15,10 +15,12 @@ class App extends Component {
               <Switch>
                 <Route exact path = "/" component = {Home} /> 
                 <Route exact path = "/mto" component = {Manto} /> 
-                <Route component = {NotFound} />
+                
                 <Layout>  
-                  <Route exact path = "/login" component = {LoginPage} /> 
+                <Route exact path = "/login" component = {LoginPage} />
+                  
                 </Layout>
+                <Route exact component = {NotFound} />
               </Switch>
             
         </BrowserRouter>
