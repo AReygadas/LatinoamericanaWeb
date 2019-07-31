@@ -4,7 +4,7 @@ module.exports = {
         connectionLimit: 10,
         host: 'localhost',
         user: 'root',
-        password: 'Password1',
+        password: 'admin',
         database: 'db_links'
     }
 

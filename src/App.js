@@ -9,16 +9,18 @@ import Manto from './pages/PageMaintenance';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Layout>
-          <Switch>
-            <Route exact path = "/" component = {Home} /> 
-            <Route exact path = "/mto" component = {Manto} /> 
-            <Route component = {NotFound} />  
-          </Switch>
-        </Layout>
-      </BrowserRouter>
-    );
+      
+        <BrowserRouter>
+          <Layout>
+           <Switch>
+              <Route exact path = "/" component = {Home} /> 
+              <Route exact path = "/mto" component = {Manto} /> 
+              <Route component = {NotFound} />  
+            </Switch>
+           </Layout>
+        </BrowserRouter>
+       
+   );
   }
 }
 
