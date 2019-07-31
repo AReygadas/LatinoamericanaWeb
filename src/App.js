@@ -5,21 +5,23 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Manto from './pages/PageMaintenance';
+import LoginPage from './pages/LoginPage';
 
 class App extends Component {
   render() {
-    return (
-      
+    return (      
         <BrowserRouter>
-          <Layout>
-           <Switch>
-              <Route exact path = "/" component = {Home} /> 
-              <Route exact path = "/mto" component = {Manto} /> 
-              <Route component = {NotFound} />  
-            </Switch>
-           </Layout>
+        
+              <Switch>
+                <Route exact path = "/" component = {Home} /> 
+                <Route exact path = "/mto" component = {Manto} /> 
+                <Route component = {NotFound} />
+                <Layout>  
+                  <Route exact path = "/login" component = {LoginPage} /> 
+                </Layout>
+              </Switch>
+            
         </BrowserRouter>
-       
    );
   }
 }
