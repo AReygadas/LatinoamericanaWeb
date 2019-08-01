@@ -15,42 +15,8 @@ import {
 
 class FormPage extends React.Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-        email: '',
-        password: '',
-        errors: {},
-      
-        users: []
-    }
-}
 
-componentDidMount() {
-    let self = this;
-    fetch('/users', {
-        method: 'GET'
-    }).then(function(response) {
-        if (response.status >= 400) {
-            throw new Error("Bad response from server");
-        }
-        return response.json();
-    }).then(function(data) {
-        self.setState({users: data});
-        
-    }).catch(err => {
-    console.log('caught it!',err);
-    })
-    
-}
-   handleChange = e=>{
-     console.log({
-      name: e.target.name, 
-      value: e.target.value})
-  }
-  handleClick (e){
-    console.log("Click... click..");
-    }
+
 
   render (){
   
@@ -70,7 +36,7 @@ componentDidMount() {
               <form>
                 <div className="grey-text">
                   <MDBInput
-                    onChange={this.handleChange}
+                    onChange={this.props.onChange}
                     name="usuario"
                     label="Type your email"
                     icon="envelope"
@@ -81,7 +47,7 @@ componentDidMount() {
                     success="right"
                   />
                   <MDBInput
-                   onChange={this.handleChange}
+                   onChange={this.props.onChange}
                    name="contraseña"
                     label="Type your password"
                     icon="lock"
@@ -94,7 +60,7 @@ componentDidMount() {
               <div className="text-center mt-4">
                
                   <MDBBtn
-                    onClick={this.handleClick}
+                    onClick={this.props.onClick}
                     color="light-blue"
                     className="mb-3"
                     type="button"
@@ -116,33 +82,7 @@ componentDidMount() {
       </MDBRow>
     </MDBContainer>
 
-
-    <div className="container"> 
-      <div className="panel panel-default p50 uth-panel">
-        <table className="table table-hover">
-          <thead>
-            <tr>
-              <th>Member name</th>
-              <th>Member email</th>
-              <th>Blood Group</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-           <tbody>
-              {this.state.users.map(usuarios =>
-                <tr key={usuarios.id}>
-                <td>{usuarios.username} </td>
-                <td>{usuarios.password}</td>
-                 <td>{usuarios.fullname}</td>
-                  </tr>
-              )}
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-
-    </React.Fragment>
+   </React.Fragment>
   );
 };
 };
