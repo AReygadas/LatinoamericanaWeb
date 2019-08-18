@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBBtn, MDBCol, MDBContainer, MDBRow } from 'mdbreact';
+import { MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 import "../index.css";
 import "../css3/styles.css";
 import FormPage from '../components/loginForm';
@@ -10,49 +10,57 @@ class loginPage extends React.Component{
         this.state = {
             users: []
         }
+        this.handleClick = this.handleClick.bind(this)
     }
     
 
- handleChange = e =>{
-    // const nextForm= this.state.form;
-    // nextForm[e.target.name]= e.target.value;
+    handleChange = e =>{
+        // const nextForm= this.state.form;
+        // nextForm[e.target.name]= e.target.value;
 
- this.setState({
-     users: {
-         ...this.state.form,
-         [e.target.name]: e.target.value,
-     }
- });
-    console.log('nada nada ...');
-}
-
-handleClick = (e) =>{
-
-  let self = this;
-    fetch('/users', {
-        method: 'POST',
+    this.setState({
+        users: {
+            ...this.state.form,
+            [e.target.name]: e.target.value,
+            
+        }
         
-        body: JSON.stringify("john")
-        
-    }).then(function(response) {
-        if (response.status >= 400) {
-            throw new Error("Bad response from server");
-       }
-       return response.json();
-    }).then(function(data) {
-       
-        self.setState({users: data});
-        
+        });
+        console.log({
+            name: e.target.name,
+            value: e.target.value,
+        })
+    }
 
-    })
-    // .then( this.props.history.push('/mto')
+        handleClick = (e) =>{
+            var data = {
+                name: "john"
+            }
+        let self = this;
+            fetch('/SingIn', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+                
+            }).then(function(response) {
+                if (response.status >= 400) {
+                    throw new Error("Bad response from server");
+            }
+            return response.json();
+            }).then(function(data) {
+            
+                self.setState({users: data});
+                
 
-    // )
-    .catch(err => {
-   console.log('caught it!',err);
-   })
-    
-}
+            })
+            // .then( this.props.history.push('/mto')
+
+            // )
+            .catch(err => {
+        console.log('caught it!',err);
+        })
+            
+        }
 
     render(){
         return(
