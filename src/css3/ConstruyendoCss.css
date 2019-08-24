@@ -1,0 +1,41 @@
+.found {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    background-image: url("../img/construccion.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -o-background-size: 100% 100%, auto;
+	-moz-background-size: 100% 100%, auto;
+	-webkit-background-size: 100% 100%, auto;
+    background-size: 100% 100%, auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.manto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/manto.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -o-background-size: 100% 100%, auto;
+	-moz-background-size: 100% 100%, auto;
+	-webkit-background-size: 100% 100%, auto;
+    background-size: 100% 100%, auto;
+    display: flex;
+    justify-content: center;
+    
+    color: aliceblue;
+}
+
+.regresar{
+   padding-top: 50%;
+}
+.centrar{
+    padding-top: 25%;
+ }

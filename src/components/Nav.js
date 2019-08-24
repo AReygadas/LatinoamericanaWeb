@@ -17,30 +17,30 @@ render() {
   return (
       <MDBNavbar color="indigo" dark expand="md">
         <MDBNavbarBrand>
-          <strong className="white-text">Navbar</strong>
+          <strong className="white-text">Inicio</strong>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav left>
             <MDBNavItem active>
-              <MDBNavLink to="#!">Home</MDBNavLink>
+              <MDBNavLink to="#!">Menu</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Features</MDBNavLink>
+              <MDBNavLink to="#!">Expedientes</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Pricing</MDBNavLink>
+              <MDBNavLink to="#!">Inventarios</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
-                  <span className="mr-2">Dropdown</span>
+                  <span className="mr-2">Reportes</span>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Servicios</MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Recivos</MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Inventarios</MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Otros...</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
@@ -49,7 +49,7 @@ render() {
             <MDBNavItem>
               <MDBFormInline waves>
                 <div className="md-form my-0">
-                  <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
+                  <input className="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search" />
                 </div>
               </MDBFormInline>
             </MDBNavItem>

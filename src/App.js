@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Manto from './pages/PageMaintenance';
 import LoginPage from './pages/LoginPage';
+import Construyendo from './pages/Construyendo';
 
 class App extends Component {
   render() {
@@ -13,11 +14,12 @@ class App extends Component {
         <BrowserRouter>
         
               <Switch>
-                <Route exact path = "/" component = {Home} /> 
-                <Route exact path = "/mto" component = {Manto} /> 
+                <Route exact path = "/" component = {LoginPage} />
                 
+                <Route exact path = "/mto" component = {Manto} /> 
+                <Route exact path = "/const" component = {Construyendo} /> 
                 <Layout>  
-                <Route exact path = "/login" component = {LoginPage} />
+                  <Route exact path = "/inicio" component = {Home} /> 
                   
                 </Layout>
                 <Route exact component = {NotFound} />
